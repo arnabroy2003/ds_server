@@ -4,6 +4,10 @@ import cookieParser from "cookie-parser"
 
 const app = express()
 
+app.get("/", (req, res) => {
+  res.send("🚀 DS Server is live and running perfectly on Vercel!");
+});
+
 app.use(cors({
     origin: process.env.CORS_ORIGIN,
     methods: [
